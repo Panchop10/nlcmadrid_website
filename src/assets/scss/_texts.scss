@@ -1,0 +1,30 @@
+.title {
+  color: $primaryColor;
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 200px;
+    background-color: $primaryColor;
+    opacity: .5;
+  }
+}
+
+.text-center .title:before {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+a {
+  color: $primaryColor;
+
+  &:hover {
+    color: darken($primaryColor, 5%)
+  }
+}

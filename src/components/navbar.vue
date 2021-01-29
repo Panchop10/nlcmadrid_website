@@ -12,7 +12,7 @@
     <div class="container">
       <div class="navbar-brand">
         <slot name="brand">
-          <img src="http://placehold.it/100x40/ec653c">
+          <img src="http://placehold.it/100x40/ec653c?text=Logo NLC">
         </slot>
 
         <button

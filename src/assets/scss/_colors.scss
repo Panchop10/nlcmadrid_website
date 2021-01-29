@@ -1,0 +1,26 @@
+.bg-primary {
+  background-color: $primaryColor !important;
+  color: white !important;
+
+  .title {
+    color: white !important;
+
+    &:before {
+      background-color: white !important;
+    }
+  }
+}
+
+.bg-dark {
+  background-color: #333333 !important;
+  color: white !important;
+}
+
+.bg-black {
+  background-color: black !important;
+  color: white !important;
+}
+
+.text-primary {
+  color: $primaryColor !important;
+}

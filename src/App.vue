@@ -1,21 +1,27 @@
 <template>
   <div id="app">
-    <navbar />
+    <Navbar />
 
     <router-view />
+
+    <Footer />
   </div>
 </template>
 
 <script>
-import navbar from '@/components/navbar.vue';
+import Navbar from '@/components/navbar.vue';
+import Footer from '@/components/footer.vue';
 
 export default {
   components: {
-    navbar,
+    Footer,
+    Navbar,
   },
 };
 </script>
 
 <style>
-
+#app {
+  overflow:hidden;
+}
 </style>

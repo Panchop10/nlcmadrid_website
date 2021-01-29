@@ -1,0 +1,41 @@
+.container {
+  &.max-900 {
+    max-width: 900px;
+  }
+}
+
+.half-container {
+  width: 100%;
+
+  @include media-sm {
+    text-align: center;
+
+    .title:before {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  @include media-sm-up {
+    &.right {
+      margin-right: auto;
+
+      &.p-5 {
+        padding-right: 0 !important;
+      }
+    }
+    &.left {
+      margin-left: auto;
+
+      &.p-5 {
+        padding-left: 0 !important;
+      }
+    }
+    max-width: 360px;
+  }
+  @include media-md-up {
+    max-width: 480px;
+  }
+  @include media-lg-up {
+    max-width: 570px;
+  }
+}
