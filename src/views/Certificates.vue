@@ -186,13 +186,19 @@
       </div>
     </div>
 
-    <div class="d-flex justify-content-center my-5 py-5">
-      <button class="btn btn-outline-primary">
-        DELE Exam Test
-      </button>
-      <button class="btn btn-primary ml-4">
-        Apply Now!
-      </button>
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-md-4 py-1">
+          <button class="btn btn-outline-primary btn-block">
+            DELE Exam Test
+          </button>
+        </div>
+        <div class="col-md-4 py-1">
+          <button class="btn btn-outline-primary btn-block">
+            Apply Now!
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </template>

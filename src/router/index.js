@@ -6,6 +6,11 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: '/',
+    name: 'FirstContact',
+    component: () => import('../views/FirstContact.vue'),
+  },
+  {
+    path: '/culture-inmersion',
     name: 'CultureInmersion',
     component: () => import('../views/CultureInmersion.vue'),
   },
