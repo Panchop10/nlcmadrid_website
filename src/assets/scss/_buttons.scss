@@ -1,0 +1,14 @@
+.btn {
+  border-radius: 1.5em;
+  padding: .5em 1em;
+  
+  &.btn-primary {
+    background-color: $primaryColor;
+    color: white !important;
+    border-color: darken($primaryColor, 4%);
+
+    &:hover {
+      background-color: darken($primaryColor, 4%);
+    }
+  }
+}
