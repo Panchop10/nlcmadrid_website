@@ -150,24 +150,26 @@
     <div class="row mb-5">
       <div class="col-md bg-primary">
         <div class="half-container left p-5">
-          <h3 class="title">
-            Description
-          </h3>
-          <p class="m-0">
-            Groups are small and a minimum of 2 students is required to form
-            one. Due to this type of groups, the timetable will be adapted to the
-            needs of the students, depending on the students of that level in each
-            specific course. You should therefore ask first to make sure of the
-            timetable of the courses being offered. Prior to registration, ask for a
-            personal interview to assess your level and advise you on what type of
-            course is best for you. This procedure allows us to get to know you
-            and design the DELE preparation course focused on your needs.
-          </p>
+          <div>
+            <h3 class="title">
+              Description
+            </h3>
+            <p class="m-0">
+              Groups are small and a minimum of 2 students is required to form
+              one. Due to this type of groups, the timetable will be adapted to the
+              needs of the students, depending on the students of that level in each
+              specific course. You should therefore ask first to make sure of the
+              timetable of the courses being offered. Prior to registration, ask for a
+              personal interview to assess your level and advise you on what type of
+              course is best for you. This procedure allows us to get to know you
+              and design the DELE preparation course focused on your needs.
+            </p>
+          </div>
         </div>
       </div>
       <div class="col-md bg-light">
         <div class="half-container right p-5">
-          <p class="m-0 mt-4">
+          <p class="m-0">
             In this course, you will learn about all the necessary components of
             the exam needed to succeed. These important components include
             the types of task to be carried out, frequent topics, the structure of

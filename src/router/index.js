@@ -6,6 +6,11 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: '/',
+    name: 'CultureInmersion',
+    component: () => import('../views/CultureInmersion.vue'),
+  },
+  {
+    path: '/certificates',
     name: 'Certificates',
     component: () => import('../views/Certificates.vue'),
   },
