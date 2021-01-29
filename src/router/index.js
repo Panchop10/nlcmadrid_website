@@ -6,6 +6,11 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: '/',
+    name: 'OnlineClasses',
+    component: () => import('../views/OnlineClasses.vue'),
+  },
+  {
+    path: '/first-contact',
     name: 'FirstContact',
     component: () => import('../views/FirstContact.vue'),
   },

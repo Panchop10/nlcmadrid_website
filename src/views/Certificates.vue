@@ -43,7 +43,7 @@
 
     <div class="row mb-5">
       <div class="col-md bg-primary">
-        <div class="half-container left p-5">
+        <div class="half-container left">
           <p class="m-0">
             SIELE measures the degree of proficiency through a four-part test:
             reading comprehension, listening comprehension, written
@@ -55,7 +55,7 @@
         </div>
       </div>
       <div class="col-md bg-light">
-        <div class="half-container right p-5">
+        <div class="half-container right">
           <p class="m-0">
             Much like the world famous TOEFL (Test of English as a Foreign
             Language) candidates receive a score between 0 and 1,000 points,
@@ -72,20 +72,20 @@
       <h3 class="title">
         Why is SIELE for you?
       </h3>
-      <ul class="list-unstyled">
-        <li class="mb-2">
+      <ul class="list-unstyled nlc-margin">
+        <li>
           <b>Digital:</b>  The steps are carried out electronically.
         </li>
-        <li class="mb-2">
+        <li>
           <b>Agil:</b> You will receive your results within 3 weeks.
         </li>
-        <li class="mb-2">
+        <li>
           <b>Adaptable:</b> Different modes of examination.
         </li>
-        <li class="mb-2">
+        <li>
           <b>Homogeneous:</b> Different linguistic variables of Spanish.
         </li>
-        <li class="mb-2">
+        <li>
           <b>Flexible:</b> No dates are set, you choose the day, time, place and type of exam
         </li>
       </ul>
@@ -149,7 +149,7 @@
 
     <div class="row mb-5">
       <div class="col-md bg-primary">
-        <div class="half-container left p-5">
+        <div class="half-container left">
           <div>
             <h3 class="title">
               Description
@@ -168,7 +168,7 @@
         </div>
       </div>
       <div class="col-md bg-light">
-        <div class="half-container right p-5">
+        <div class="half-container right">
           <p class="m-0">
             In this course, you will learn about all the necessary components of
             the exam needed to succeed. These important components include

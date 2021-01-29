@@ -44,7 +44,7 @@
 
     <div class="row no-gutters">
       <div class="col-md bg-primary">
-        <div class="half-container left p-5">
+        <div class="half-container left">
           <div>
             <h3 class="title">
               Day Excursions
@@ -81,7 +81,7 @@
         />
       </div>
       <div class="col-md bg-light">
-        <div class="half-container right p-5">
+        <div class="half-container right">
           <div>
             <h3 class="title">
               Theater Club

@@ -103,9 +103,11 @@ nav.nav {
     text-align: center;
     max-width: 700px;
     
-    h1 {
-      padding-bottom: 15px;
+    h1, h2 {
       font-weight: 800;
+    }
+    h1, h2, h3, h4 {
+      padding-bottom: 15px;
       position: relative;
 
       &:before {
@@ -151,4 +153,9 @@ footer {
     }
   }
   }
+}
+
+// Lists
+ul.list-unstyled.nlc-margin li {
+  margin-bottom: 1em;
 }

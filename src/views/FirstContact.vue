@@ -18,11 +18,11 @@
       style="background-image: url('http://placehold.it/1200x600/ec653c?text=full width image')"
     >
       <div class="image-caption">
-        <h1>
+        <h3>
           We are the only Spanish school
           that offers this exclusive initiation
           to Spanish Language.
-        </h1>
+        </h3>
         <button class="btn btn-primary">
           Apply now!
         </button>
@@ -81,29 +81,29 @@
         />
       </div>
       <div class="col-md bg-primary">
-        <div class="half-container right p-5">
+        <div class="half-container right">
           <div>
             <h3 class="title">
               Course Details
             </h3>
-            <ul class="list-unstyled">
-              <li class="mb-3">
+            <ul class="list-unstyled nlc-margin">
+              <li>
                 <b>Duration:</b> 2 weeks
               </li>
-              <li class="mb-3">
+              <li>
                 <b>Number of hours per week:</b> 20 hours (15 + 5)
               </li>
-              <li class="mb-3">
+              <li>
                 <b>Classes:</b> 3 hours a day (15 min. rest), from Monday to Friday,
                 plus 5 hours of extra activity.
               </li>
-              <li class="mb-3">
+              <li>
                 <b>Small groups:</b> Between 3 and 7 students
               </li>
-              <li class="mb-3">
+              <li>
                 <b>Starting date:</b> Every Monday
               </li>
-              <li class="mb-3">
+              <li>
                 <b>Minimum age:</b> 17
               </li>
             </ul>
