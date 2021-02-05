@@ -18,6 +18,11 @@ const routes = [
         redirect: 'private-classes',
       },
       {
+        path: 'private-classes',
+        name: 'PrivateClasses',
+        component: () => import('../views/PrivateClasses.vue'),
+      },
+      {
         path: 'online-classes',
         name: 'OnlineClasses',
         component: () => import('../views/OnlineClasses.vue'),
