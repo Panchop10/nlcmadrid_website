@@ -15,7 +15,12 @@ const routes = [
     children: [
       {
         path: '/',
-        redirect: 'au-pair-program',
+        redirect: 'volunteer-program',
+      },
+      {
+        path: 'volunteer-program',
+        name: 'VolunteerProgram',
+        component: () => import('../views/VolunteerProgram.vue'),
       },
       {
         path: 'au-pair-program',

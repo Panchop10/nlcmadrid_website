@@ -43,6 +43,8 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: grid;
+  place-items: center;
 
   &.minh-400 {
     min-height: 400px;
