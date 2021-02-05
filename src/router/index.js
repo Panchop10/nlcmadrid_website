@@ -15,7 +15,12 @@ const routes = [
     children: [
       {
         path: '/',
-        redirect: 'private-classes',
+        redirect: 'au-pair-program',
+      },
+      {
+        path: 'au-pair-program',
+        name: 'AuPairProgram',
+        component: () => import('../views/AuPairProgram.vue'),
       },
       {
         path: 'private-classes',
