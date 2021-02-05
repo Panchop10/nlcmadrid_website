@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="full-width-img bottom-right-rounded"
+      class="full-width-img bottom-left-rounded"
       style="background-image: url('http://placehold.it/1200x600/ec653c?text=full width image')"
     >
       <div class="image-caption">

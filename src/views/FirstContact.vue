@@ -1,24 +1,26 @@
 <template>
   <div>
-    <div class="container my-5 text-center">
-      <h1 class="title">
-        First Contact with Spanish
-      </h1>
-      <small>
-        At Native Language College we want our students to be able to study at
-        all levels including students that have never studied Spanish before,
-        which is why we have created a First Contact course. It is a beginners
-        level course which gives the students a strong, basic foundation of the
-        Spanish language.
-      </small>
+    <div class="page-head">
+      <div class="caption">
+        <h1 class="title">
+          First Contact with Spanish
+        </h1>
+        <small>
+          At Native Language College we want our students to be able to study at
+          all levels including students that have never studied Spanish before,
+          which is why we have created a First Contact course. It is a beginners
+          level course which gives the students a strong, basic foundation of the
+          Spanish language.
+        </small>
+      </div>
     </div>
 
     <div
-      class="full-width-img bottom-right-rounded"
+      class="full-width-img bottom-left-rounded"
       style="background-image: url('http://placehold.it/1200x600/ec653c?text=full width image')"
     >
       <div class="image-caption">
-        <h3>
+        <h3 class="no-line">
           We are the only Spanish school
           that offers this exclusive initiation
           to Spanish Language.

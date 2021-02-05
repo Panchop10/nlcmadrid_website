@@ -85,6 +85,37 @@ nav.nav {
 
 }
 
+// Page Head
+.page-head {
+  height: 600px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 30px;
+
+  .caption {
+    position: relative;
+    text-align: center;
+    max-width: 960px;
+
+
+    h1 { font-size: 4em; }
+    h2 { font-size: 3em; }
+    h3 { font-size: 2.5em; }
+    h4 { font-size: 2em; }
+    h1, h2 {
+      font-weight: 800;
+    }
+
+    .title {
+      padding-bottom: 15px;
+      &:before {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
+
 // images
 .full-width-img {
   width: 100%;
@@ -102,7 +133,13 @@ nav.nav {
     color: white;
     text-align: center;
     max-width: 700px;
+
+    .no-line:before { content: unset }
     
+    h1 { font-size: 4em; }
+    h2 { font-size: 3em; }
+    h3 { font-size: 2.5em; }
+    h4 { font-size: 2em; }
     h1, h2 {
       font-weight: 800;
     }
@@ -135,20 +172,30 @@ nav.nav {
   }
 }
 
+.top-left-rounded,
+.top-right-rounded,
+.bottom-left-rounded,
+.bottom-right-rounded {
+  position: relative;
 
-
-  .bottom-right-rounded:after {
-    content: '';
-    position: absolute;
-  bottom: -1px;
-    left: 0;
-    right: 0;
-    top: 0;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: center bottom;
-    background-image: url('/img/NLCMadrid_slide_shape_2.svg');
+  &.rounded-container {
+    padding-top: 150px;
+    padding-bottom: 80px;
   }
+}
+
+.bottom-right-rounded:after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center bottom;
+  background-image: url('/img/NLCMadrid_slide_shape_2.svg');
+}
 
 .bottom-left-rounded:after {
   content: '';
@@ -157,19 +204,19 @@ nav.nav {
   left: 0;
   right: 0;
   top: 0;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: center bottom;
-    background-image: url('/img/NLCMadrid_slide_shape_2.svg');
-    -moz-transform: scaleX(-1);
-    -o-transform: scaleX(-1);
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-  }
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center bottom;
+  background-image: url('/img/NLCMadrid_slide_shape_2.svg');
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
 
-  .top-left-rounded:after {
-    content: '';
-    position: absolute;
+.top-left-rounded:after {
+  content: '';
+  position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
@@ -177,16 +224,16 @@ nav.nav {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center top;
-    background-image: url('/img/NLCMadrid_slide_shape_2.svg');
-    -moz-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
-  }
+  background-image: url('/img/NLCMadrid_slide_shape_2.svg');
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
 
-  .top-right-rounded:after {
-    content: '';
-    position: absolute;
+.top-right-rounded:after {
+  content: '';
+  position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
@@ -194,12 +241,12 @@ nav.nav {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center top;
-    background-image: url('/img/NLCMadrid_slide_shape_2.svg');
-    -moz-transform: rotate(180deg) scaleX(-1);
-    -o-transform: rotate(180deg) scaleX(-1);
-    -webkit-transform: rotate(180deg) scaleX(-1);
-    transform: rotate(180deg) scaleX(-1);
-  }
+  background-image: url('/img/NLCMadrid_slide_shape_2.svg');
+  -moz-transform: rotate(180deg) scaleX(-1);
+  -o-transform: rotate(180deg) scaleX(-1);
+  -webkit-transform: rotate(180deg) scaleX(-1);
+  transform: rotate(180deg) scaleX(-1);
+}
 
 
 // footer
