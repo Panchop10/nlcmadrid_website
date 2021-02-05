@@ -24,16 +24,44 @@
       </div>
       <ul class="navbar-nav">
         <li
-          v-for="m of menus"
+          v-for="(m, index) of menus"
           :key="m.title"
           class="nav-item"
-          :class="{active: m.active}"
         >
           <a
+            href="#"
             class="nav-link"
+            :class="{
+              active: m.active,
+            }"
+            @click="openMenu(index)"
           >
             {{ m.title }}
           </a>
+          <transition name="fadeLeft">
+            <ul
+              v-if="m.children && m.children.length && m.open"
+              style="animation-duration: 0.3s"
+              class="dropdown-menu"
+            >
+              <li
+                v-for="(s, si) of m.children"
+                :key="si"
+                class="dropdown-item"
+                :class="{
+                  disabled: !s.to
+                }"
+              >
+                <router-link
+                  :to="{name:s.to || null}"
+                  class="nav-link"
+                  active-class="actve"
+                >
+                  {{ s.title }}
+                </router-link>
+              </li>
+            </ul>
+          </transition>
         </li>
         <li class="nav-item">
           <button
@@ -69,22 +97,67 @@ export default {
     menus: [
       {
         title: 'Spanish Programs',
-        active: true,
+        active: false,
+        open: false,
+        children: [
+          {
+            title: 'First Contact',
+            to: 'FirstContact',
+          },
+          {
+            title: 'Culture Inmersion',
+            to: 'CultureInmersion',
+          },
+          {
+            title: 'Certificates',
+            to: 'Certificates',
+          },
+        ],
       },
       {
         title: 'Personalized Courses',
+        open: false,
+        children: [
+          {
+            title: 'Volunteer Program',
+            to: 'VolunteerProgram',
+          },
+          {
+            title: 'Au Pair Work Program',
+            to: 'AuPairProgram',
+          },
+          {
+            title: 'Football Program',
+          },
+          {
+            title: 'Summer Camp',
+          },
+        ],
         active: false,
       },
       {
         title: 'Services',
+        open: false,
         active: false,
+        children: [
+          {
+            title: 'Private Classes',
+            to: 'PrivateClasses',
+          },
+          {
+            title: 'Online Classes',
+            to: 'OnlineClasses',
+          },
+        ],
       },
       {
         title: 'Activities',
+        open: false,
         active: false,
       },
       {
         title: 'About Us',
+        open: false,
         active: false,
       },
     ],
@@ -103,6 +176,23 @@ export default {
         }
       });
     }
+    window.addEventListener('click', (e) => {
+      if (!e.path[0].classList.contains('nav-link')) this.closeMenus();
+    });
+  },
+  methods: {
+    openMenu(i) {
+      this.menus[i].open = !this.menus[i].open;
+      this.closeMenus(i);
+    },
+    closeMenus(except = null) {
+      this.menus = this.menus.map((x, ind) => {
+        if (except === null || except !== ind) {
+          x.open = false;
+        }
+        return x;
+      });
+    },
   },
 };
 </script>

@@ -44,12 +44,35 @@ nav.nav {
     margin-left: auto;
 
     .nav-item {
+      position: relative;
+
        &:not(:last-of-type) {
         margin-right: 15px;
       }
 
-      &.active a {
+      a.active {
         border-bottom: 1px solid $primaryColor;
+      }
+
+      .dropdown-menu {
+        position: absolute;
+        display: block;
+        
+        border-radius: unset;
+        border: 0;
+        border-top: $primaryColor 1px solid;
+        -webkit-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.35);
+        -moz-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.35);
+        box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.35);
+        
+        .dropdown-item {
+          &:hover {
+            background-color: $primaryColor; 
+          }
+          &:active {
+            background: $primaryColor;
+          }
+        }
       }
     }
 
