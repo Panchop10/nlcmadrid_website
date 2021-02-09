@@ -156,7 +156,7 @@ export default {
           },
           {
             title: 'Spanish Internship',
-            to: null,
+            to: 'SpanishInternship',
           },
         ],
       },

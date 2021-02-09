@@ -20,7 +20,12 @@ const routes = [
     children: [
       {
         path: '/',
-        redirect: 'visa-application',
+        redirect: 'spanish-internship',
+      },
+      {
+        path: 'spanish-internship',
+        name: 'SpanishInternship',
+        component: () => import('../views/spanish/SpanishInternship.vue'),
       },
       {
         path: 'visa-application',
