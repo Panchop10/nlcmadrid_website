@@ -31,6 +31,31 @@
     }
   }
 
+  &.btn-secondary {
+    background-color: $secondaryColor;
+    color: white !important;
+    border-color: darken($secondaryColor, 4%);
+
+    &:hover, &:active, &:focus {
+      background-color: darken($secondaryColor, 4%) !important;
+      border-color: darken($secondaryColor, 4%) !important;
+      box-shadow: unset !important;
+    }
+  }
+  
+  &.btn-outline-secondary {
+    background-color: transparent;
+    color: $secondaryColor !important;
+    border-color: $secondaryColor;
+
+    &:hover, &:active, &:focus {
+      background-color: $secondaryColor !important;
+      color: white !important;
+      border-color: darken($secondaryColor, 4%) !important;
+      box-shadow: unset !important;
+    }
+  }
+
 
   &.btn-white {
     background-color: white;

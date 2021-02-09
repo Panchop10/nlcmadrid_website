@@ -7,11 +7,16 @@ const routes = [
   {
     path: '/',
     name: 'Landing',
-    component: () => import('../views/Landing.vue'),
+    component: () => import('../views/bussiness/Landing.vue'),
   },
   {
     path: '/in-progress',
-    component: () => import('../views/Index.vue'),
+    name: 'GeneralLanding',
+    component: () => import('../views/generalIndex.vue'),
+  },
+  {
+    path: '/in-progress/spanish',
+    component: () => import('../views/spanish/Index.vue'),
     children: [
       {
         path: '/',
@@ -20,37 +25,37 @@ const routes = [
       {
         path: 'volunteer-program',
         name: 'VolunteerProgram',
-        component: () => import('../views/VolunteerProgram.vue'),
+        component: () => import('../views/spanish/VolunteerProgram.vue'),
       },
       {
         path: 'au-pair-program',
         name: 'AuPairProgram',
-        component: () => import('../views/AuPairProgram.vue'),
+        component: () => import('../views/spanish/AuPairProgram.vue'),
       },
       {
         path: 'private-classes',
         name: 'PrivateClasses',
-        component: () => import('../views/PrivateClasses.vue'),
+        component: () => import('../views/spanish/PrivateClasses.vue'),
       },
       {
         path: 'online-classes',
         name: 'OnlineClasses',
-        component: () => import('../views/OnlineClasses.vue'),
+        component: () => import('../views/spanish/OnlineClasses.vue'),
       },
       {
         path: 'first-contact',
         name: 'FirstContact',
-        component: () => import('../views/FirstContact.vue'),
+        component: () => import('../views/spanish/FirstContact.vue'),
       },
       {
         path: 'culture-inmersion',
         name: 'CultureInmersion',
-        component: () => import('../views/CultureInmersion.vue'),
+        component: () => import('../views/spanish/CultureInmersion.vue'),
       },
       {
         path: 'certificates',
         name: 'Certificates',
-        component: () => import('../views/Certificates.vue'),
+        component: () => import('../views/spanish/Certificates.vue'),
       },
     ],
   },
