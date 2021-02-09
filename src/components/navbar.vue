@@ -112,6 +112,14 @@ export default {
             title: 'Certificates',
             to: 'Certificates',
           },
+          {
+            title: 'Private Classes',
+            to: 'PrivateClasses',
+          },
+          {
+            title: 'Online Classes',
+            to: 'OnlineClasses',
+          },
         ],
       },
       {
@@ -128,9 +136,11 @@ export default {
           },
           {
             title: 'Football Program',
+            to: 'FootballProgram',
           },
           {
             title: 'Summer Camp',
+            to: 'SummerCamp',
           },
         ],
         active: false,
@@ -141,12 +151,12 @@ export default {
         active: false,
         children: [
           {
-            title: 'Private Classes',
-            to: 'PrivateClasses',
+            title: 'Visa Application',
+            to: 'VisaApplication',
           },
           {
-            title: 'Online Classes',
-            to: 'OnlineClasses',
+            title: 'Spanish Internship',
+            to: null,
           },
         ],
       },

@@ -20,7 +20,12 @@ const routes = [
     children: [
       {
         path: '/',
-        redirect: 'football-program',
+        redirect: 'visa-application',
+      },
+      {
+        path: 'visa-application',
+        name: 'VisaApplication',
+        component: () => import('../views/spanish/VisaApplication.vue'),
       },
       {
         path: 'football-program',
