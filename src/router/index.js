@@ -21,6 +21,10 @@ const routes = [
       {
         path: '/',
         redirect: 'volunteer-program',
+      {
+        path: 'summer-camp',
+        name: 'SummerCamp',
+        component: () => import('../views/spanish/SummerCamp.vue'),
       },
       {
         path: 'volunteer-program',
