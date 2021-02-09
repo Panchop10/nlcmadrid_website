@@ -20,7 +20,13 @@ const routes = [
     children: [
       {
         path: '/',
-        redirect: 'volunteer-program',
+        redirect: 'football-program',
+      },
+      {
+        path: 'football-program',
+        name: 'FootballProgram',
+        component: () => import('../views/spanish/FootballProgram.vue'),
+      },
       {
         path: 'summer-camp',
         name: 'SummerCamp',
