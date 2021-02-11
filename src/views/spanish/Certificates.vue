@@ -5,7 +5,7 @@
       style="background-image: url('http://placehold.it/1200x600/ec653c?text=full width image')"
     >
       <div class="image-caption">
-        <h4>
+        <h4 class="no-line">
           Certify your
         </h4>
         <h1>Spanish Level</h1>
@@ -68,7 +68,7 @@
       </div>
     </div>
 
-    <div class="text-center">
+    <div class="text-center py-5">
       <h3 class="title">
         Why is SIELE for you?
       </h3>
@@ -104,8 +104,10 @@
       </div>
     </div>
 
-    <div class="bg-light py-5">
-      <div class="container py-5">
+    <div
+      class="bg-light top-left-rounded rounded-container"
+    >
+      <div class="container">
         <div class="row">
           <div class="col-md">
             <img
@@ -186,7 +188,7 @@
       </div>
     </div>
 
-    <div class="container py-5">
+    <div class="container py-5 mb-5">
       <div class="row justify-content-center">
         <div class="col-md-4 py-1">
           <button class="btn btn-outline-primary btn-block">
@@ -213,6 +215,10 @@ export default {
 .logoImg {
   max-width: 300px;
   display: block;
-  margin: auto;
+  margin: 20px auto;
+}
+.image-caption h4 {
+  padding: 0;
+  margin: 0;
 }
 </style>

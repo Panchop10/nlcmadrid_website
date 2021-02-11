@@ -13,6 +13,7 @@ module.exports = {
     ],
     "rules": {
       "vue/no-use-v-if-with-v-for": "off",
+      "no-param-reassign": "off",
     },
     "settings": {
         'import/resolver': {
