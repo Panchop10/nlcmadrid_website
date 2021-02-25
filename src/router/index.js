@@ -7,12 +7,16 @@ const routes = [
   {
     path: '/',
     name: 'Landing',
-    component: () => import('../views/bussiness/Landing.vue'),
+    component: () => import('../views/business/Landing.vue'),
   },
   {
     path: '/in-progress',
     name: 'GeneralLanding',
     component: () => import('../views/generalIndex.vue'),
+  },
+  {
+    path: '/in-progress/business',
+    component: () => import('../views/business/Index.vue'),
   },
   {
     path: '/in-progress/spanish',

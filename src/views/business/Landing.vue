@@ -15,7 +15,7 @@
             BIENVENIDOS A
           </p>
           <p class="title">
-            NLC BUSSINESS SCHOOL
+            NLC BUSINESS SCHOOL
           </p>
           <p class="posttitle">
             TUS NUEVOS PROGRAMAS DE MASTER Y MBA'S

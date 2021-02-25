@@ -1,0 +1,23 @@
+.vue-accordion {
+  text-align: left;
+
+  .card {
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 2px;
+    text-align: center;
+
+    .card-header {
+      background: rgb(233, 232, 232);
+      border-radius: unset;
+      border: 0;
+      font-weight: 600;
+      color: rgba(0,0,0,.6);
+      
+      i {
+        float: left;
+        font-size: .75em;
+      }
+    }
+  }
+}

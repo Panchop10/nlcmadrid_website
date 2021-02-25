@@ -22,56 +22,7 @@
           <span class="navbar-toggler-icon" />
         </button>
       </div>
-      <ul class="navbar-nav">
-        <li
-          v-for="(m, index) of menus"
-          :key="m.title"
-          class="nav-item"
-        >
-          <a
-            href="#"
-            class="nav-link"
-            :class="{
-              active: m.active,
-            }"
-            @click="openMenu(index)"
-          >
-            {{ m.title }}
-          </a>
-          <transition name="fadeLeft">
-            <ul
-              v-if="m.children && m.children.length && m.open"
-              style="animation-duration: 0.3s"
-              class="dropdown-menu"
-            >
-              <li
-                v-for="(s, si) of m.children"
-                :key="si"
-                class="dropdown-item"
-                :class="{
-                  disabled: !s.to
-                }"
-              >
-                <router-link
-                  :to="{name:s.to || null}"
-                  class="nav-link"
-                  active-class="actve"
-                >
-                  {{ s.title }}
-                </router-link>
-              </li>
-            </ul>
-          </transition>
-        </li>
-        <li class="nav-item">
-          <button
-            href="#"
-            class="btn btn-primary"
-          >
-            Apply Now!
-          </button>
-        </li>
-      </ul>
+      <slot />
     </div>
   </nav>
 </template>

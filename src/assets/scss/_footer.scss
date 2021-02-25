@@ -1,0 +1,32 @@
+
+// footer
+footer {
+  ul {
+    margin: 10px 0;
+
+    li {
+    font-size: .8em;
+    margin-bottom: 5px;
+    
+    i {
+      width: 20px;
+      text-align: center;
+      margin-right: 10px;
+      color: $primaryColor;
+    }
+  }
+  }
+}
+
+.business footer {
+  li {
+    color: rgba(255,255,255,.6);
+  }
+  .title {
+    color: white;
+    font-weight: 600;
+  }
+  i.fas, i.far, i.fab {
+    color: white;
+  }
+}
