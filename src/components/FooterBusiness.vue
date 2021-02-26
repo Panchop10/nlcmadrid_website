@@ -28,9 +28,13 @@
               </button>
             </li>
             <li>
-              <button class="btn btn-outline-primary btn-block btn-sm">
+              <a
+                class="btn btn-outline-primary btn-block btn-sm"
+                target="_blank"
+                href="privacy_policy.html"
+              >
                 Política de privacidad
-              </button>
+              </a>
             </li>
           </ul>
         </div>
