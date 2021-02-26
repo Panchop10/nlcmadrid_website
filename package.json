@@ -12,6 +12,7 @@
     "core-js": "^3.6.5",
     "qs": "^6.9.6",
     "vue": "^2.6.11",
+    "vue-cookie-law": "^1.13.3",
     "vue-modal": "github:farena/vue-modal",
     "vue-owl-carousel": "farena/vue-owl-carousel",
     "vue-router": "^3.2.0",
