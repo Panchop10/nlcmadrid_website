@@ -80,3 +80,57 @@
     }
   }
 }
+
+.business .btn {
+  border-radius: unset;
+
+  &.btn-primary {
+    background-color: white;
+    color: #333333 !important;
+    border-color: darken(white, 4%);
+
+    &:hover, &:active, &:focus {
+      background-color: darken(white, 4%) !important;
+      border-color: darken(white, 4%) !important;
+      box-shadow: unset !important;
+    }
+  }
+
+  &.btn-outline-primary {
+    background-color: transparent;
+    color: white !important;
+    border-color: white;
+
+    &:hover, &:active, &:focus {
+      background-color: white !important;
+      color: #333333 !important;
+      border-color: darken(white, 4%) !important;
+      box-shadow: unset !important;
+    }
+  }
+
+  &.btn-secondary {
+    background-color: black;
+    color: white !important;
+    border-color: lighten(black, 4%);
+
+    &:hover, &:active, &:focus {
+      background-color: lighten(black, 4%) !important;
+      border-color: lighten(black, 4%) !important;
+      box-shadow: unset !important;
+    }
+  }
+  
+  &.btn-outline-secondary {
+    background-color: transparent;
+    color: black !important;
+    border-color: black;
+
+    &:hover, &:active, &:focus {
+      background-color: black !important;
+      color: white !important;
+      border-color: lighten(black, 4%) !important;
+      box-shadow: unset !important;
+    }
+  }
+}

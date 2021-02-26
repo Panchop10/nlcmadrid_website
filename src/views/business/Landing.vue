@@ -7,7 +7,7 @@
       >
         <div class="image-caption pb-4">
           <img
-            src="img/NLCMadrid_business_logo.svg"
+            src="/img/NLCMadrid_business_logo.svg"
             alt="NLC BUSSINES LOGO"
             class="nlc_logo"
           >
@@ -15,7 +15,7 @@
             BIENVENIDOS A
           </p>
           <p class="title">
-            NLC BUSSINESS SCHOOL
+            NLC BUSINESS SCHOOL
           </p>
           <p class="posttitle">
             TUS NUEVOS PROGRAMAS DE MASTER Y MBA'S

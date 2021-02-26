@@ -5,7 +5,7 @@
   @media (max-width: 575px) { @content; }
 }
 @mixin media-sm {
-  @media (max-width: 767px) { @content; }
+  @media (max-width: 769px) { @content; }
 }
 @mixin media-md {
   @media (max-width: 991px) { @content; }
@@ -22,7 +22,7 @@
   @media (min-width: 992px) { @content; }
 }
 @mixin media-sm-up {
-  @media (min-width: 768px) { @content; }
+  @media (min-width: 770px) { @content; }
 }
 @mixin media-xs-up {
   @media (min-width: 576px) { @content; }

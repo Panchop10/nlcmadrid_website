@@ -1,0 +1,170 @@
+// NAVBAR
+nav.nav {
+  > .container {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+
+    @include media-sm {
+      flex-direction: column;
+    }
+
+  }
+
+  .navbar-brand {
+    margin: 0;
+
+    img {
+      height: 100%;
+      min-height: 35px;
+    }
+
+    @include media-sm {
+      width: 100%;
+      display: flex;
+    }
+
+    .navbar-toggler {
+      display: none;
+      padding: 0;
+      border: none;
+      opacity: .7;
+
+      &:focus {
+        box-shadow: none;
+        opacity: 1;
+        outline: none;
+      }
+
+      @include media-sm {
+        display: block;
+      }
+    }
+  }
+  
+  .navbar-nav {
+    flex-direction: row;
+    padding-top: .35em;
+    margin-left: auto;
+
+    .nav-item {
+      position: relative;
+
+       &:not(:last-of-type) {
+        margin-right: 15px;
+      }
+
+      a.active {
+        border-bottom: 1px solid $primaryColor;
+      }
+
+      .dropdown-menu {
+        position: absolute;
+        display: block;
+        
+        border-radius: unset;
+        border: 0;
+        border-top: $primaryColor 1px solid;
+        -webkit-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.35);
+        -moz-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.35);
+        box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.35);
+        
+        .dropdown-item {
+          &:hover {
+            background-color: $primaryColor; 
+          }
+          &:active {
+            background: $primaryColor;
+          }
+        }
+      }
+    }
+
+    @include media-sm {
+      padding-top: 0;
+      flex-direction: column;
+      margin-left: unset;
+      margin-right: auto;
+      max-height: 1000px;
+      transition: ease .5s;
+    }
+  }
+
+  @include media-sm {
+    &:not(.hidden) {
+      transition: ease .5s;
+      background: white;
+    }
+    transition: ease .5s;
+    
+    &.hidden .navbar-nav  {
+      max-height: 0;
+      overflow: hidden;
+      transition: ease .5s;
+    }
+  }
+
+  &.navbar-dark {
+    .md-icon {
+      color: white;
+    }
+  }
+
+}
+
+
+.business nav.nav {
+  transition: .5s ease;
+
+  .container, .navbar-nav {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .nav-item {
+    margin: 0 !important;
+    padding: 8px 12px;
+
+    &.active {
+      border-top: 2px solid white;
+      transition: .5s ease;
+      padding-top: 6px;
+    }
+
+    &:hover {
+      background: rgba(255,255,255,.3)
+    }
+  }
+
+  .logoBusiness {
+    transition: .5s ease;
+    background-image: url('/img/NLCMadrid_business_logo.svg');
+    min-height: 35px;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 150px;
+  }
+
+  &.fixed-top.bg-white {
+    transition: .5s ease;
+    .logoBusiness {
+      background-image: url('/img/NLCMadrid_business_logo_black.svg');
+    }
+  
+    .navbar-toggler, li, a {
+      color: black;
+      transition: .5s ease;
+    }
+    .nav-item{
+      &:hover {
+        background: rgba(0,0,0,.3)
+      }
+      &.active {
+        border-top-color: black;
+        transition: .5s ease;
+      }
+    }
+  }
+}

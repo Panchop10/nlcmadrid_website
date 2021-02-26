@@ -22,9 +22,11 @@
   @include media-sm-up {
     &.right {
       margin-right: auto;
+      padding-right: 0;
     }
     &.left {
       margin-left: auto;
+      padding-left: 0;
     }
     max-width: 360px;
   }
