@@ -19,7 +19,7 @@
           class="navbar-toggler ml-auto"
           @click="showMenu = !showMenu"
         >
-          <span class="navbar-toggler-icon" />
+          <i class="fas fa-bars" />
         </button>
       </div>
       <slot />

@@ -4,7 +4,7 @@
       <div class="row py-5">
         <div class="col-md">
           <img
-            src="http://placehold.it/200x100/FFFFFF?text=Logo NLC"
+            src="/img/NLCMadrid_business_logo.svg"
             alt=""
             width="150"
           >

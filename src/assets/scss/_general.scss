@@ -83,6 +83,10 @@
     }
   }
 
+  &.no-filter:before {
+    content: unset;
+  }
+
   &:before {
     content: "";
     position: absolute;
@@ -196,5 +200,16 @@ ul.list-unstyled.nlc-margin li {
         margin-right: auto;
       }
     }
+  }
+}
+
+img.icon {
+  max-height: 100px;
+  max-width: 100px;
+  margin-bottom: 1em;
+
+  &.icon-sm {
+    max-height: 70px;
+    max-width: 70px;  
   }
 }

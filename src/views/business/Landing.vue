@@ -7,7 +7,7 @@
       >
         <div class="image-caption pb-4">
           <img
-            src="img/NLCMadrid_business_logo.svg"
+            src="/img/NLCMadrid_business_logo.svg"
             alt="NLC BUSSINES LOGO"
             class="nlc_logo"
           >

@@ -1,5 +1,5 @@
 <template>
-  <div class="row no-gutters">
+  <div class="row no-gutters h-100">
     <div
       v-if="imgLeft || isMobile"
       class="col-md"
@@ -8,7 +8,10 @@
       <div
         v-if="!noImg"
         class="img-container"
-        :style="{'background-image': `url('${imageUrl}')`}"
+        :style="{
+          'background-image': `url('${imageUrl}')`,
+          'height': '100%'
+        }"
       />
       <div
         v-else
