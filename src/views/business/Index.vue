@@ -13,43 +13,25 @@
       <ul class="navbar-nav">
         <li
           v-for="(m, index) of menus"
-          :key="m.title"
+          :key="index"
           class="nav-item"
           :class="{
             active: m.active,
           }"
         >
           <a
-            href="#"
+            v-if="m.title !== 'CONTACTANOS'"
             class="nav-link"
-            @click="openMenu(index)"
           >
             {{ m.title }}
           </a>
-          <transition name="fadeLeft">
-            <ul
-              v-if="m.children && m.children.length && m.open"
-              style="animation-duration: 0.3s"
-              class="dropdown-menu"
-            >
-              <li
-                v-for="(s, si) of m.children"
-                :key="si"
-                class="dropdown-item"
-                :class="{
-                  disabled: !s.to
-                }"
-              >
-                <router-link
-                  :to="{name:s.to || null}"
-                  class="nav-link"
-                  active-class="actve"
-                >
-                  {{ s.title }}
-                </router-link>
-              </li>
-            </ul>
-          </transition>
+          <a
+            v-else
+            class="nav-link"
+            @click="openContactModal"
+          >
+            {{ m.title }}
+          </a>
         </li>
       </ul>
     </Navbar>
@@ -413,7 +395,10 @@
           Para que te ayudademos a encontrar los mejores profesionales para tu
           institución.
         </p>
-        <button class="btn btn-outline-secondary">
+        <button
+          class="btn btn-outline-secondary"
+          @click="openContactModal"
+        >
           PINCHA AQUI
         </button>
       </template>
@@ -431,6 +416,11 @@
       </div>
     </GalleryRow>
 
+    <ContactModal
+      v-if="showContact"
+      @close="showContact=false"
+    />
+
     <Footer />
   </div>
 </template>
@@ -442,6 +432,7 @@ import GalleryRow from '@/components/GalleryRow.vue';
 import MasonryGallery from '@/components/masonry/MasonryGallery.vue';
 import Accordion from '@/components/accordion/accordion.vue';
 import carousel from 'vue-owl-carousel';
+import ContactModal from './contactModal.vue';
 
 export default {
   components: {
@@ -451,103 +442,105 @@ export default {
     GalleryRow,
     MasonryGallery,
     Accordion,
+    ContactModal,
   },
-  data: () => ({
-    menus: [
-      {
-        title: 'HOME',
-        open: false,
-        active: true,
+  data() {
+    return {
+      menus: [
+        {
+          title: 'HOME',
+          open: false,
+          active: true,
+        },
+        // {
+        //   title: 'CURSOS',
+        //   open: false,
+        //   active: false,
+        // },
+        // {
+        //   title: 'PROGRAMAS MASTER',
+        //   open: false,
+        //   active: false,
+        // },
+        // {
+        //   title: 'SOBRE NOSOTROS',
+        //   open: false,
+        //   active: false,
+        // },
+        {
+          title: 'CONTACTANOS',
+          open: false,
+          active: false,
+        },
+      ],
+      galleryImgs: [
+        {
+          img: '/img/nlc_img_1.jpg',
+          height: 50,
+        },
+        {
+          img: '/img/nlc_img_2.jpg',
+          height: 25,
+        },
+        {
+          img: '/img/nlc_img_3.jpg',
+          height: 25,
+        },
+        {
+          img: '/img/nlc_img_4.jpg',
+          height: 25,
+        },
+        {
+          img: '/img/nlc_img_5.jpg',
+          height: 50,
+        },
+        {
+          img: '/img/nlc_img_6.jpg',
+          height: 25,
+        },
+        {
+          img: '/img/nlc_img_7.jpg',
+          height: 25,
+        },
+        {
+          img: '/img/nlc_img_8.jpg',
+          height: 25,
+        },
+        {
+          img: '/img/nlc_img_9.jpg',
+          height: 50,
+        },
+        {
+          img: '/img/nlc_img_10.jpg',
+          height: 50,
+        },
+        {
+          img: '/img/nlc_img_11.jpg',
+          height: 25,
+        },
+        {
+          img: '/img/nlc_img_12.jpg',
+          height: 25,
+        },
+      ],
+      masonryOptions: {
+        769: {
+          columns: 2,
+          height: '1500px',
+        },
+        default: {
+          columns: 4,
+          height: '1000px',
+        },
       },
-      {
-        title: 'CURSOS',
-        open: false,
-        active: false,
-      },
-      {
-        title: 'PROGRAMAS MASTER',
-        open: false,
-        active: false,
-      },
-      {
-        title: 'SOBRE NOSOTROS',
-        open: false,
-        active: false,
-      },
-      {
-        title: 'CONTACTANOS',
-        open: false,
-        active: false,
-      },
-    ],
-    galleryImgs: [
-      {
-        img: '/img/nlc_img_1.jpg',
-        height: 50,
-      },
-      {
-        img: '/img/nlc_img_2.jpg',
-        height: 25,
-      },
-      {
-        img: '/img/nlc_img_3.jpg',
-        height: 25,
-      },
-      {
-        img: '/img/nlc_img_4.jpg',
-        height: 25,
-      },
-      {
-        img: '/img/nlc_img_5.jpg',
-        height: 50,
-      },
-      {
-        img: '/img/nlc_img_6.jpg',
-        height: 25,
-      },
-      {
-        img: '/img/nlc_img_7.jpg',
-        height: 25,
-      },
-      {
-        img: '/img/nlc_img_8.jpg',
-        height: 25,
-      },
-      {
-        img: '/img/nlc_img_9.jpg',
-        height: 50,
-      },
-      {
-        img: '/img/nlc_img_10.jpg',
-        height: 50,
-      },
-      {
-        img: '/img/nlc_img_11.jpg',
-        height: 25,
-      },
-      {
-        img: '/img/nlc_img_12.jpg',
-        height: 25,
-      },
-    ],
-    masonryOptions: {
-      769: {
-        columns: 2,
-        height: '1500px',
-      },
-      default: {
-        columns: 4,
-        height: '1000px',
-      },
-    },
-    navTexts: [
-      '<i class="fa fa-chevron-left">',
-      '<i class="fa fa-chevron-right">',
-    ],
-    accordionItems: [
-      {
-        title: 'Gestión y Aplicación de Visados',
-        content: `
+      navTexts: [
+        '<i class="fa fa-chevron-left">',
+        '<i class="fa fa-chevron-right">',
+      ],
+      accordionItems: [
+        {
+          title: 'Gestión y Aplicación de Visados',
+          content: `
           <p>
           NLC Business School ofrece un servicio nuevo y exclusivo que no encontrarás en
           ninguna otra escuela.  
@@ -579,18 +572,18 @@ export default {
           probabilidad de que su solicitud de visa sea exitosa.
           </p>
         `,
-      },
-      {
-        title: 'Research',
-        content: 'Investigación, Documentación, Revistas de investigación.',
-      },
-      {
-        title: 'Biblioteca',
-        content: '',
-      },
-      {
-        title: 'Apoyo estudiantil y asesoramiento personalizado',
-        content: `
+        },
+        {
+          title: 'Research',
+          content: 'Investigación, Documentación, Revistas de investigación.',
+        },
+        {
+          title: 'Biblioteca',
+          content: '',
+        },
+        {
+          title: 'Apoyo estudiantil y asesoramiento personalizado',
+          content: `
           <p>
             Una parte muy importante de nuestra misión es considerar al estudiante
             como familia en el momento en que el estudiante entra en contacto con la
@@ -630,18 +623,18 @@ export default {
             <b>Precio:</b> Gratis.
           </p>
         `,
-      },
-      {
-        title: 'Coaching/Mentoring',
-        content: '',
-      },
-      {
-        title: 'Becas',
-        content: '',
-      },
-      {
-        title: 'Alojamientos/Housing',
-        content: `
+        },
+        {
+          title: 'Coaching/Mentoring',
+          content: '',
+        },
+        {
+          title: 'Becas',
+          content: '',
+        },
+        {
+          title: 'Alojamientos/Housing',
+          content: `
           <p>
             Nuestro objetivo es permitirle tener una de las experiencias de
             aprendizaje más agradables de Madrid. En NLC Madrid disponemos de una
@@ -705,10 +698,10 @@ export default {
             Precio por noche / media pensión: 35 €.
           </p>
         `,
-      },
-      {
-        title: 'Tramitación de seguromédico para estudiantes extranjeros',
-        content: `
+        },
+        {
+          title: 'Tramitación de seguromédico para estudiantes extranjeros',
+          content: `
           <p>
             <b>INCLUYE:</b> <br>
             Alojamiento con familias españolas en el centro de Madrid. <br>
@@ -727,45 +720,55 @@ export default {
             intentará cambiarlo lo antes posible.
           </p>
         `,
-      },
-    ],
-    dpp_items: [
-      {
-        img: '/img/dpp_1_950x400px.jpg',
-        title: 'Prácticas en empresas',
-        content: `
+        },
+      ],
+      dpp_items: [
+        {
+          img: '/img/dpp_1_950x400px.jpg',
+          title: 'Prácticas en empresas',
+          content: `
           Proporcionamos a las empresas un servicio exclusivo de búsqueda de perfiles en
           prácticas de estudiantes actuales de nuestros diferentes programas.
         `,
-        link: null,
-      },
-      {
-        img: '/img/dpp_2_950x400px.jpg',
-        title: 'Carreras profesionales',
-        content: `
+          link: null,
+        },
+        {
+          img: '/img/dpp_2_950x400px.jpg',
+          title: 'Carreras profesionales',
+          content: `
           Ofrecemos un servicio integral de reclutamiento y búsqueda de candidaturas NLC 
           para procesos de selección de cualquier área, y en cualquier ubicación.
         `,
-        link: null,
-      },
-      {
-        img: '/img/dpp_3_950x400px.jpg',
-        title: 'Emprendimiento',
-        content: `
+          link: null,
+        },
+        {
+          img: '/img/dpp_3_950x400px.jpg',
+          title: 'Emprendimiento',
+          content: `
           Contamos con la experiencia acumulada en muchos proyectos empresariales, ayudando 
           a estudiantes de NLC a construir su propio negocio.
         `,
-        link: null,
-      },
-      {
-        title: 'Consultoria laboral / Headhunting',
-        content: `
+          link: null,
+        },
+        {
+          title: 'Consultoria laboral / Headhunting',
+          content: `
           
         `,
-        link: null,
-      },
-    ],
-  }),
+          link: null,
+        },
+      ],
+      showContact: false,
+    };
+  },
+  methods: {
+    openContactModal() {
+      this.showContact = true;
+    },
+    closeContactModal() {
+      this.showContact = false;
+    },
+  },
 };
 </script>
 
