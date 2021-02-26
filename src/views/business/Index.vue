@@ -55,9 +55,9 @@
           </small>
         </p>
 
-        <div class="btn btn-outline-primary btn-sm mt-4">
+        <!-- <div class="btn btn-outline-primary btn-sm mt-4">
           CONOCE MÁS
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -366,7 +366,7 @@
             :href="item.link"
             class="btn btn-outline-secondary"
           >
-            PINCHA AQUI
+            PINCHA AQUÍ
           </a>
         </div>
       </GalleryRow>
@@ -399,7 +399,7 @@
           class="btn btn-outline-secondary"
           @click="openContactModal"
         >
-          PINCHA AQUI
+          PINCHA AQUÍ
         </button>
       </template>
 
@@ -411,7 +411,7 @@
           Formación bonificada
         </p>
         <button class="btn btn-outline-secondary">
-          PINCHA AQUI
+          PINCHA AQUÍ
         </button>
       </div>
     </GalleryRow>
@@ -751,6 +751,7 @@ export default {
           link: null,
         },
         {
+          img: '/img/dpp_4_950x400px.jpg',
           title: 'Consultoria laboral / Headhunting',
           content: `
           

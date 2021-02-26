@@ -10,11 +10,11 @@
           >
         </div>
         <div class="col-md">
-          <h6>Opening Hours</h6>
+          <h6>Horarios de atención</h6>
           <ul class="list-unstyled">
             <li>
               <i class="far fa-clock" />
-              Monday to Friday from 9.00h to 16.00h
+              Lunes a viernes de 9.00h a 16.00h
             </li>
             <li>
               <i class="far fa-envelope" />
@@ -22,26 +22,26 @@
             </li>
             <li>
               <button class="btn btn-primary btn-block btn-sm">
-                Download our Brochure
+                Descarga nuestro folleto
               </button>
             </li>
             <li>
               <button class="btn btn-outline-white btn-block btn-sm">
-                Privacy Policy
+                Política de privacidad
               </button>
             </li>
           </ul>
         </div>
         <div class="col-md">
           <h6 class="text-primary">
-            Address
+            Dirección
           </h6>
           <ul class="list-unstyled">
             <li>
               <i class="fas fa-map-marker-alt" />
               Plaza Puerta del Sol 11,
-              Second Floor, Post Code 28013
-              Madrid, Spain
+              Segundo Piso, Código Postal 28013
+              Madrid, España
             </li>
             <li>
               <i class="fab fa-whatsapp" />
@@ -53,7 +53,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-md">
+        <!-- <div class="col-md">
           <h6 class="text-primary">
             Tutoring Hours
           </h6>
@@ -64,7 +64,7 @@
             <li>Other Facilities</li>
             <li>About Madrid & Spain</li>
           </ul>
-        </div>
+        </div> -->
       </div>
     </div>
     <div class="bg-black py-3">
