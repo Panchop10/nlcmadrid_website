@@ -6,8 +6,19 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: '/',
-    name: 'Landing',
     component: () => import('../views/business/Index.vue'),
+    children: [
+      {
+        path: '',
+        name: 'Landing',
+        component: () => import('../views/business/Home.vue'),
+      },
+      {
+        path: 'programas',
+        name: 'Programas',
+        component: () => import('../views/business/Programas.vue'),
+      },
+    ],
   },
   {
     path: '/in-progress',

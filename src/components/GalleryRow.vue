@@ -8,11 +8,20 @@
       <div
         v-if="!noImg"
         class="img-container"
+        :class="{
+          'darken-img': !!imageCaption
+        }"
         :style="{
           'background-image': `url('${imageUrl}')`,
-          'height': '100%'
+          'height': '100%',
         }"
-      />
+      >
+        <div
+          v-if="imageCaption"
+          class="caption"
+          v-html="imageCaption"
+        />
+      </div>
       <div
         v-else
         class="half-container"
@@ -56,8 +65,20 @@
       <div
         v-if="!noImg"
         class="img-container"
-        :style="{'background-image': `url('${imageUrl}')`}"
-      />
+        :class="{
+          'darken-img': !!imageCaption
+        }"
+        :style="{
+          'background-image': `url('${imageUrl}')`,
+          'height': '100%',
+        }"
+      >
+        <div
+          v-if="imageCaption"
+          class="caption"
+          v-html="imageCaption"
+        />
+      </div>
       <div
         v-else
         class="half-container"
@@ -97,6 +118,10 @@ export default {
       type: String,
       default: 'http://placehold.it/400',
     },
+    imageCaption: {
+      type: String,
+      default: null,
+    },
     imgContColorClass: {
       type: String,
       default: 'bg-primary',
@@ -117,6 +142,9 @@ export default {
 };
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+.darken-img .caption {
+  z-index: 1;
+  text-align: center;
+}
 </style>

@@ -1,0 +1,63 @@
+.business.programas {
+  .masters-carousel {
+    .owl-item {
+      height: 900px;
+
+      @include media-sm {
+        height: 1300px;
+
+        .half-container {
+          padding: 4em 3em !important;
+        }
+
+        h3.title {
+          font-size: 1.5em;
+        }
+        h3.price {
+          font-size: 1.3em;
+          font-weight: 600;
+        }
+        p.content {
+          font-size: .9em;
+        }
+      }
+      @include media-md {
+        height: 1250px;
+      }
+    }
+    .owl-nav {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      cursor: pointer;
+      transform: translate(0, -50%);
+      display: flex;
+      justify-content: space-between;
+      pointer-events: none;
+
+      .fa {
+        color: white;
+        font-size: 2em !important;
+      }
+
+      .owl-prev, .owl-next {
+        background: black !important;
+        content: '';
+        color: white !important;
+        border-radius: 50%;
+        height: 30px;
+        width:  30px;
+        display: grid;
+        align-items: center;
+        font-size: 5px;
+        pointer-events: all;
+      }
+    }
+    .masters-carousel-content {
+      min-height: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+}
