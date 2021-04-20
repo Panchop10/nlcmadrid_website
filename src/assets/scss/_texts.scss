@@ -19,6 +19,12 @@ body {
       background-color: black;
     }
   }
+  &.text-white {
+    color: white;
+    &:before {
+      background-color: white;
+    }
+  }
 
   &:before {
     content: "";

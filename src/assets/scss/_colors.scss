@@ -15,6 +15,10 @@
   background-color: #333333 !important;
   color: white !important;
 }
+.bg-grey {
+  background-color: $grey !important;
+  color: black !important;
+}
 
 .bg-dark-pattern {
   background-color: #333333 !important;
@@ -30,4 +34,18 @@
 
 .text-primary {
   color: $primaryColor !important;
+}
+.text-grey {
+  color: $dkGrey !important;
+}
+
+.darken-img:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
 }
